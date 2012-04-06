@@ -1,0 +1,20 @@
+--- src/http/ngx_http_request_body.c	2012-04-05 12:25:43.000000000 +0400
++++ src/http/ngx_http_request_body.c.patched	2012-04-05 12:34:16.000000000 +0400
+@@ -15,7 +15,7 @@
+ static ngx_int_t ngx_http_write_request_body(ngx_http_request_t *r,
+     ngx_chain_t *body);
+ static ngx_int_t ngx_http_read_discarded_request_body(ngx_http_request_t *r);
+-static ngx_int_t ngx_http_test_expect(ngx_http_request_t *r);
++ngx_int_t ngx_http_test_expect(ngx_http_request_t *r);
+ 
+ 
+ /*
+@@ -602,7 +602,7 @@
+ }
+ 
+ 
+-static ngx_int_t
++ngx_int_t
+ ngx_http_test_expect(ngx_http_request_t *r)
+ {
+     ngx_int_t   n;

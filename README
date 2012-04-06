@@ -1,0 +1,7 @@
+You have to patch nginx with nginx-ngx_http_request_body.patch,
+then patch nginx_upload module with nginx-ngx_upload-expect100.patch
+
+Checked against nginx 1.1.18 and nginx_upload 2.2.0
+
+http://nginx.org/download/nginx-1.1.18.tar.gz
+http://www.grid.net.ru/nginx/download/nginx_upload_module-2.2.0.tar.gz
